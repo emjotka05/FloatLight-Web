@@ -1,0 +1,62 @@
+/*VARIABLES*/
+:root {
+    --accent-dark: #050505;        
+    --accent-copper: #A16231;  
+    --text-accent-orange: #FF8424;   
+    --text-main: #FFFFFF;
+    --text-accent: #FFEAC2;      
+    --accent-grey: #C8C8C8;     
+    --font-main-font: 'Montserrat', sans-serif;
+    --font-second-font: 'Inter', sans-serif;
+}
+
+/*RESET*/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html {
+    scroll-behavior: smooth; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+
+body {
+    color: var(--text-main);
+    font-family: var(--font-main-font);
+
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    display: block;  
+    height: auto;
+}
+
+/*<nav>
+            <a href="#" id="nav-title" aria-label="FloatLight Home Page">FloatLight</a>
+            <div class="nav-links">
+                <a href="store.html" class="nav-text">Buy Now</a>
+                <a href="#contact" class="nav-text">Contact</a>
+                <a href="#ThirdPage" class="nav-text">Why Us</a>
+            </div>    
+        </nav>*/
+
+/*NAVBAR*/
+nav{
+    display: flex;
+    width: 100%;
+    max-height: 5rem;
+    position: fixed;
+    background-color: var(--accent-dark);
+    opacity: 55%;
+}
