@@ -1,6 +1,6 @@
 /*VARIABLES*/
 :root {
-    --accent-dark: #050505;        
+    --accent-dark: 0, 0, 0;        
     --accent-copper: #A16231;  
     --text-accent-orange: #FF8424;   
     --text-main: #FFFFFF;
@@ -31,6 +31,14 @@ body {
     -ms-overflow-style: none; 
 }
 
+.screen{
+    min-width: 100vw;
+    min-height: 100vh;
+
+    box-shadow: inset 0px 150px 150px -50px rgba(var(--accent-dark), 1);
+    box-shadow: inset 0px -150px 150px -50px rgba(var(--accent-dark), 1); 
+}
+
 html::-webkit-scrollbar, body::-webkit-scrollbar {
     display: none;
 }
@@ -40,6 +48,7 @@ img {
     padding: 0;
     display: block;  
     height: auto;
+    max-width: 100%;
 }
 
 /*<nav>
@@ -55,8 +64,321 @@ img {
 nav{
     display: flex;
     width: 100%;
-    max-height: 5rem;
+    min-height: 3.8rem;
     position: fixed;
-    background-color: var(--accent-dark);
-    opacity: 55%;
+    background-color: rgba(var(--accent-dark), 0.55);
+    justify-content: center;
+    align-items: center;
+    gap: 6.25rem;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.nav-links{
+    display: flex;
+    gap: 6.25rem;
+    justify-content: center;
+    align-items: center;
+}
+#nav-title{
+    letter-spacing: 0.1em;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.nav-text{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+/*TRZECIONKA -0.5REM wzgledem figmy*/
+
+/*FIRST PAGE*/
+#FirstPage{
+    background-image: url(images/futuristic_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#FP-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.8rem;
+}
+#FP-image{
+    width: 30rem;
+    margin-bottom: 1.875rem;
+}
+#FirstPage h1{
+    letter-spacing: 0.05em;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-accent);
+}
+
+#FP-h2{
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 4.375rem;
+}
+.action-btn{
+    padding: 0.8rem 1.2rem;
+    background-color: var(--accent-copper);
+    border: none;
+    border-radius: 3.125rem;
+    color: var(--text-main);
+    font-family: var(--font-main-font);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/*SecondPage*/
+
+#SecondPage {
+    background-image: url(images/futuristic_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#SecondPage .action-btn{
+    padding: 0.5rem 1.5rem;
+    font-weight: 400;
+}
+
+#SP-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 8rem; 
+}
+
+#SP-h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.8rem;
+    margin-bottom: 0rem; 
+    margin-top: 5rem;
+}
+
+#SP-h2 span {
+    color: var(--text-accent-orange);
+    font-style: oblique; 
+}
+
+
+#SP-text-subsection {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; 
+    text-align: right; 
+    max-width: 30rem; 
+    margin-bottom: 4rem;
+}
+
+.SP-title-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.SP-h3 {
+    font-family: var(--font-main-font);
+    font-size: 1.85rem;
+    font-weight: 500;
+}
+
+.SP-p { 
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--accent-grey);
+}
+
+#SP-img-and-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#SP-img1 {
+    height: 26rem; 
+}
+
+#SP-img2 {
+    max-height: 48rem; 
+    border-radius: 1.5rem; 
+    margin-bottom: 4rem;
+}
+
+/*THIRD PAGE*/
+
+#ThirdPage{
+    display: flex;
+    background-image: url(images/futuristic_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0rem;
+}
+
+#TP-h2{
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.8rem;
+    margin-top: 3.8rem;
+    color: var(--text-accent);
+
+    
+}
+#TP-h2 span{
+    text-decoration: underline;
+}
+#TP-hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+}
+
+#TP-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 2rem; 
+    margin-bottom: 2rem; 
+}
+#ThirdPage .action-btn{
+    margin-bottom: 8rem;
+}
+
+.TP-card {
+    background-color: rgba(30, 30, 30, 0.6); 
+    border: 1px solid var(--accent-copper);
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 22rem; 
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.TP-testimonials{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.TP-rating{
+    width: 10rem;
+}
+.TP-p1{
+    line-height: 1.5;
+}
+.TP-author{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+.TP-card-offset{
+    margin-top: 5rem;
+}
+
+
+/*FOOTER*/
+
+#contact {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
+    border-top: 1px solid rgba(var(--accent-grey), 0.2); 
+}
+
+#footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    max-width: 80rem; 
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-logo {
+    font-family: var(--font-main-font);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.footer-brand p {
+    font-size: 1rem;
+    color: var(--accent-grey);
+    line-height: 1.4;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-links h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--accent-grey);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--text-main);
+}
+
+.footer-copyright {
+    display: flex;
+    align-items: center; 
+}
+
+.footer-copyright p {
+    color: var(--accent-grey);
+    font-size: 0.95rem;
+}
+
+
+/*STORE CHECKOUT*/
+
+#CheckoutPage{
+    
 }
