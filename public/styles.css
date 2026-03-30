@@ -86,13 +86,39 @@ nav{
     font-weight: 600;
     color: var(--text-main);
     text-decoration: none;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+#nav-title:hover{
+    transform: scale(103%);
+    transition: 0.3s ease;
 }
 
 .nav-text{
     font-size: 1.5rem;
     font-weight: 400;
-    color: var(--text-main);
+    color: var(--accent-grey);
     text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+.nav-text:hover{
+    color: var(--text-main);
+}
+.nav-text::after {
+   content: "";
+   position: absolute;
+   bottom: -7px;
+   width: 100%;
+   left: 0;
+   height: 1.35px;
+   background-color: var(--accent-grey);
+   transform: scaleX(0);
+   transform-origin: left;
+   transition: 0.3s ease;
+}
+.nav-text:hover::after {
+   transform: scaleX(1);
 }
 
 /*TRZECIONKA -0.5REM wzgledem figmy*/
@@ -118,7 +144,7 @@ nav{
     margin-bottom: 1.875rem;
 }
 #FirstPage h1{
-    letter-spacing: 0.05em;
+    letter-spacing: 0.025em;
     font-size: 4rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -140,8 +166,17 @@ nav{
     font-family: var(--font-main-font);
     font-size: 2rem;
     font-weight: 400;
+    transition: transform 0.3s linear;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
-
+.action-btn:hover{
+    transform: scale(104%);
+    color: white;
+    background-color: #804d26;
+    
+}
 /*SecondPage*/
 
 #SecondPage {
@@ -299,6 +334,86 @@ nav{
 }
 
 
+
+/*STORE CHECKOUT*/
+
+#CheckoutPage{
+    background-image: url(images/futuristic_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#CP-hero{
+    display: flex;
+    gap: 12.5rem;
+}
+
+#CP-img-docs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#CP-checkout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: start;
+    background-color: rgba(var(--accent-dark), 0.4);
+    padding: 3rem;
+    border: 0.1rem, solid,  var(--accent-copper);
+    border-radius: 10%;
+}
+
+#CheckoutPage h1{
+    letter-spacing: 0.05em;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#CP-h2{
+    font-size: 2rem;
+    color: var(--accent-copper);
+    margin-bottom: 3.75rem;
+}
+
+#CP-p1{
+    max-width: 28rem;
+    font-size: 1.43rem;
+    font-weight: 500;
+    margin-bottom: 3.75rem;
+}
+
+#CP-p2{
+    font-size: 0.875rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+#doc-btn{
+    border: none;
+    color: black;
+    font-size: 1.5rem;
+    padding: 0.625rem 0.93rem;
+    border-radius: 3.125rem;
+    font-weight: 500;
+    background-color: var(--accent-grey);
+    transition: 0.3s ease;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+#doc-btn:hover{
+    background-color: #e0e0e0;
+    transform: scale(103%);
+}
+
 /*FOOTER*/
 
 #contact {
@@ -374,11 +489,4 @@ nav{
 .footer-copyright p {
     color: var(--accent-grey);
     font-size: 0.95rem;
-}
-
-
-/*STORE CHECKOUT*/
-
-#CheckoutPage{
-    
 }
