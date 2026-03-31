@@ -21,19 +21,19 @@ async function sendMailFunc(customerName, customerEmail) {
                 <p style="font-size: 14px; color: #777;">If you have any questions, simply reply to this email.</p>
                 <p style="font-size: 14px;">Best regards,<br><strong>The FloatLight Team</strong></p>
             </div>`
-            
+
     const mailOptions = {
         from: emailUser,
         to: customerEmail,
         subject: "FloatLight order confirmation.",
         html: emailHtml
     }
-    try{
+    try {
         await transporter.sendMail(mailOptions)
         console.log(`Mail to ${customerEmail} send succesfully!`)
-    }catch(mailError){
+    } catch (mailError) {
         console.log(` Error while sending mail to ${customerEmail}. Error: ${mailError.message}`)
-    }   
+    }
 }
 
 module.exports = { sendMailFunc }

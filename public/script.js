@@ -11,19 +11,19 @@ actionButtons.forEach(actionButton => {
         }
     })
 
-*/ 
+*/
 
 /*!!!!VERSION WITH BACKEND!!!!*/
 const actionButtons = document.querySelectorAll(".action-btn")
 
 actionButtons.forEach(actionButton => {
     actionButton.addEventListener("click", () => {
-        if(actionButton.id === "stripe-btn"){
+        if (actionButton.id === "stripe-btn") {
             requestSession()
-        }else if(actionButton.id === 'go-back-btn'){
+        } else if (actionButton.id === 'go-back-btn') {
             window.location.href = "index.html"
         }
-        else{
+        else {
             window.location.href = "store.html"
         }
     })
@@ -31,21 +31,21 @@ actionButtons.forEach(actionButton => {
 
 async function requestSession() {
     const url = `http://localhost:3000/checkout-session`
-    try{
-        const response = await fetch(url,{
-            method : "POST"
+    try {
+        const response = await fetch(url, {
+            method: "POST"
         })
 
-        if(!response.ok){
-        throw new Error(`Response status: ${response.status}`)
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`)
         }
 
         const result = await response.json()
         console.log(result)
         window.location.href = `${result.url}`
 
-    }catch(error){
+    } catch (error) {
         console.log(error.message)
     }
-      
+
 }

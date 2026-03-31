@@ -1,25 +1,27 @@
 /*VARIABLES*/
 :root {
-    --accent-dark: 0, 0, 0;        
-    --accent-copper: #A16231;  
-    --text-accent-orange: #FF8424;   
+    --accent-dark: 0, 0, 0;
+    --accent-copper: #A16231;
+    --text-accent-orange: #FF8424;
     --text-main: #FFFFFF;
-    --text-accent: #FFEAC2;      
-    --accent-grey: #C8C8C8;     
+    --text-accent: #FFEAC2;
+    --accent-grey: #C8C8C8;
     --font-main-font: 'Montserrat', sans-serif;
     --font-second-font: 'Inter', sans-serif;
 }
 
 /*RESET*/
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth; 
-    scrollbar-width: none; 
+    scroll-behavior: smooth;
+    scrollbar-width: none;
     -ms-overflow-style: none;
     font-size: 110%;
 }
@@ -28,26 +30,27 @@ body {
     color: var(--text-main);
     font-family: var(--font-main-font);
 
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-.screen{
+.screen {
     min-width: 100vw;
     min-height: 100vh;
 
     box-shadow: inset 0rem 9.375rem 9.375rem -3.125rem rgba(var(--accent-dark), 1);
-    box-shadow: inset 0rem -9.375rem 9.375rem -3.125rem rgba(var(--accent-dark), 1); 
+    box-shadow: inset 0rem -9.375rem 9.375rem -3.125rem rgba(var(--accent-dark), 1);
 }
 
-html::-webkit-scrollbar, body::-webkit-scrollbar {
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
     display: none;
 }
 
 img {
     margin: 0;
     padding: 0;
-    display: block;  
+    display: block;
     height: auto;
     max-width: 100%;
 }
@@ -62,7 +65,7 @@ img {
         </nav>*/
 
 /*NAVBAR*/
-nav{
+nav {
     display: flex;
     width: 100%;
     min-height: 3.8rem;
@@ -75,13 +78,15 @@ nav{
     left: 0;
     z-index: 999;
 }
-.nav-links{
+
+.nav-links {
     display: flex;
     gap: 7rem;
     justify-content: center;
     align-items: center;
 }
-#nav-title{
+
+#nav-title {
     letter-spacing: 0.1em;
     font-size: 1.5rem;
     font-weight: 600;
@@ -90,12 +95,13 @@ nav{
     transition: 0.3s ease;
     cursor: pointer;
 }
-#nav-title:hover{
+
+#nav-title:hover {
     transform: scale(103%);
     transition: 0.3s ease;
 }
 
-.nav-text{
+.nav-text {
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--accent-grey);
@@ -103,29 +109,32 @@ nav{
     position: relative;
     cursor: pointer;
 }
-.nav-text:hover{
+
+.nav-text:hover {
     color: var(--text-main);
 }
+
 .nav-text::after {
-   content: "";
-   position: absolute;
-   bottom: -0.438rem;
-   width: 100%;
-   left: 0;
-   height: 0.084rem;
-   background-color: var(--accent-grey);
-   transform: scaleX(0);
-   transform-origin: left;
-   transition: 0.3s ease;
+    content: "";
+    position: absolute;
+    bottom: -0.438rem;
+    width: 100%;
+    left: 0;
+    height: 0.084rem;
+    background-color: var(--accent-grey);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.3s ease;
 }
+
 .nav-text:hover::after {
-   transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 /*TRZECIONKA -0.5REM wzgledem figmy*/
 
 /*FIRST PAGE*/
-#FirstPage{
+#FirstPage {
     background-image: url(images/futuristic_bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -133,18 +142,21 @@ nav{
     justify-content: center;
     align-items: center;
 }
-#FP-hero{
+
+#FP-hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 3.8rem;
 }
-#FP-image{
+
+#FP-image {
     width: 30rem;
     margin-bottom: 1.875rem;
 }
-#FirstPage h1{
+
+#FirstPage h1 {
     letter-spacing: 0.025em;
     font-size: 4rem;
     font-weight: 600;
@@ -152,13 +164,14 @@ nav{
     color: var(--text-accent);
 }
 
-#FP-h2{
+#FP-h2 {
     font-size: 2.5rem;
     font-weight: 400;
     text-align: center;
     margin-bottom: 4.375rem;
 }
-.action-btn{
+
+.action-btn {
     padding: 0.8rem 1.2rem;
     background-color: var(--accent-copper);
     border: none;
@@ -172,12 +185,14 @@ nav{
     backface-visibility: hidden;
     transform: translateZ(0);
 }
-.action-btn:hover{
+
+.action-btn:hover {
     transform: scale(104%);
     color: white;
     background-color: #804d26;
-    
+
 }
+
 /*SecondPage*/
 
 #SecondPage {
@@ -190,7 +205,7 @@ nav{
     flex-direction: column;
 }
 
-#SecondPage .action-btn{
+#SecondPage .action-btn {
     padding: 0.5rem 1.5rem;
     font-weight: 400;
 }
@@ -198,30 +213,30 @@ nav{
 #SP-hero {
     display: flex;
     justify-content: center;
-    align-items: center; 
-    gap: 8rem; 
+    align-items: center;
+    gap: 8rem;
 }
 
 #SP-h2 {
     text-align: center;
     font-weight: 600;
     font-size: 2.8rem;
-    margin-bottom: 0rem; 
+    margin-bottom: 0rem;
     margin-top: 5rem;
 }
 
 #SP-h2 span {
     color: var(--text-accent-orange);
-    font-style: oblique; 
+    font-style: oblique;
 }
 
 
 #SP-text-subsection {
     display: flex;
     flex-direction: column;
-    gap: 3rem; 
-    text-align: right; 
-    max-width: 30rem; 
+    gap: 3rem;
+    text-align: right;
+    max-width: 30rem;
     margin-bottom: 4rem;
 }
 
@@ -237,7 +252,7 @@ nav{
     font-weight: 500;
 }
 
-.SP-p { 
+.SP-p {
     font-size: 1.35rem;
     font-weight: 400;
     color: var(--accent-grey);
@@ -251,18 +266,18 @@ nav{
 }
 
 #SP-img1 {
-    height: 26rem; 
+    height: 26rem;
 }
 
 #SP-img2 {
-    max-height: 48rem; 
-    border-radius: 1.5rem; 
+    max-height: 48rem;
+    border-radius: 1.5rem;
     margin-bottom: 4rem;
 }
 
 /*THIRD PAGE*/
 
-#ThirdPage{
+#ThirdPage {
     display: flex;
     background-image: url(images/futuristic_bg.jpg);
     background-size: cover;
@@ -274,19 +289,21 @@ nav{
     margin-top: 0rem;
 }
 
-#TP-h2{
+#TP-h2 {
     text-align: center;
     font-weight: 600;
     font-size: 2.8rem;
     margin-top: 3.8rem;
     color: var(--text-accent);
 
-    
+
 }
-#TP-h2 span{
+
+#TP-h2 span {
     text-decoration: underline;
 }
-#TP-hero{
+
+#TP-hero {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,41 +313,47 @@ nav{
 #TP-card-container {
     display: flex;
     justify-content: center;
-    align-items: center; 
-    gap: 2rem; 
-    margin-bottom: 2rem; 
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
-#ThirdPage .action-btn{
+
+#ThirdPage .action-btn {
     margin-bottom: 8rem;
 }
 
 .TP-card {
-    background-color: rgba(30, 30, 30, 0.6); 
+    background-color: rgba(30, 30, 30, 0.6);
     border: 0.063rem solid var(--accent-copper);
     border-radius: 1rem;
     padding: 2rem;
-    max-width: 22rem; 
+    max-width: 22rem;
     gap: 2rem;
     display: flex;
     flex-direction: column;
 }
-.TP-testimonials{
+
+.TP-testimonials {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
-.TP-rating{
+
+.TP-rating {
     width: 10rem;
 }
-.TP-p1{
+
+.TP-p1 {
     line-height: 1.5;
 }
-.TP-author{
+
+.TP-author {
     display: flex;
     gap: 1.5rem;
     align-items: center;
 }
-.TP-card-offset{
+
+.TP-card-offset {
     margin-top: 5rem;
 }
 
@@ -338,7 +361,7 @@ nav{
 
 /*STORE CHECKOUT*/
 
-#CheckoutPage{
+#CheckoutPage {
     background-image: url(images/futuristic_bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -347,12 +370,12 @@ nav{
     align-items: center;
 }
 
-#CP-hero{
+#CP-hero {
     display: flex;
     gap: 12.5rem;
 }
 
-#CP-img-docs{
+#CP-img-docs {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -360,7 +383,7 @@ nav{
     gap: 2rem;
 }
 
-#CP-checkout{
+#CP-checkout {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -368,37 +391,37 @@ nav{
     align-items: start;
     background-color: rgba(var(--accent-dark), 0.4);
     padding: 3rem;
-    border: 0.1rem, solid,  var(--accent-copper);
+    border: 0.1rem solid var(--accent-copper);
     border-radius: 10%;
 }
 
-#CheckoutPage h1{
+#CheckoutPage h1 {
     letter-spacing: 0.05em;
     font-size: 4rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }
 
-#CP-h2{
+#CP-h2 {
     font-size: 2rem;
     color: var(--accent-copper);
     margin-bottom: 3.75rem;
 }
 
-#CP-p1{
+#CP-p1 {
     max-width: 28rem;
     font-size: 1.43rem;
     font-weight: 500;
     margin-bottom: 3.75rem;
 }
 
-#CP-p2{
+#CP-p2 {
     font-size: 0.875rem;
     margin-left: 1.5rem;
     margin-top: 1rem;
 }
 
-#doc-btn{
+#doc-btn {
     border: none;
     color: black;
     font-size: 1.5rem;
@@ -410,13 +433,14 @@ nav{
     backface-visibility: hidden;
     transform: translateZ(0);
 }
-#doc-btn:hover{
+
+#doc-btn:hover {
     background-color: #e0e0e0;
     transform: scale(103%);
 }
 
 /*SUCCESS PAGE*/
-#SuccessPage{
+#SuccessPage {
     background-image: url(images/futuristic_bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -425,20 +449,20 @@ nav{
     align-items: center;
 }
 
-#SucP-container{
+#SucP-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: rgba(var(--accent-dark), 0.4);
     padding: 3rem;
-    border: 0.1rem, solid,  var(--accent-copper);
+    border: 0.1rem solid var(--accent-copper);
     border-radius: 3.125rem;
     gap: 2rem;
     text-align: center;
 }
 
-#SucP-h2{
+#SucP-h2 {
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--text-accent-orange);
@@ -446,7 +470,7 @@ nav{
 
 /*CANCEL PAGE*/
 
-#CancelPage{
+#CancelPage {
     background-image: url(images/futuristic_bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -455,20 +479,20 @@ nav{
     align-items: center;
 }
 
-#C-container{
+#C-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: rgba(var(--accent-dark), 0.4);
     padding: 3rem;
-    border: 0.1rem, solid,  var(--accent-copper);
+    border: 0.1rem, solid, var(--accent-copper);
     border-radius: 3.125rem;
     gap: 2rem;
     text-align: center;
 }
 
-#C-h2{
+#C-h2 {
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--text-accent-orange);
@@ -481,15 +505,15 @@ nav{
     display: flex;
     justify-content: center;
     padding: 4rem 2rem;
-    border-top: 0.063rem solid rgba(var(--accent-grey), 0.2); 
+    border-top: 0.063rem solid rgba(var(--accent-grey), 0.2);
 }
 
 #footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     width: 100%;
-    max-width: 80rem; 
+    max-width: 80rem;
 }
 
 .footer-brand {
@@ -543,7 +567,7 @@ nav{
 
 .footer-copyright {
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
 .footer-copyright p {
