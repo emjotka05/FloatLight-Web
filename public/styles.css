@@ -21,6 +21,7 @@ html {
     scroll-behavior: smooth; 
     scrollbar-width: none; 
     -ms-overflow-style: none;
+    font-size: 110%;
 }
 
 body {
@@ -69,14 +70,14 @@ nav{
     background-color: rgba(var(--accent-dark), 0.55);
     justify-content: center;
     align-items: center;
-    gap: 6.25rem;
+    gap: 7rem;
     top: 0;
     left: 0;
     z-index: 999;
 }
 .nav-links{
     display: flex;
-    gap: 6.25rem;
+    gap: 7rem;
     justify-content: center;
     align-items: center;
 }
@@ -412,6 +413,65 @@ nav{
 #doc-btn:hover{
     background-color: #e0e0e0;
     transform: scale(103%);
+}
+
+/*SUCCESS PAGE*/
+#SuccessPage{
+    background-image: url(images/futuristic_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#SucP-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(var(--accent-dark), 0.4);
+    padding: 3rem;
+    border: 0.1rem, solid,  var(--accent-copper);
+    border-radius: 3.125rem;
+    gap: 2rem;
+    text-align: center;
+}
+
+#SucP-h2{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-accent-orange);
+}
+
+/*CANCEL PAGE*/
+
+#CancelPage{
+    background-image: url(images/futuristic_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#C-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(var(--accent-dark), 0.4);
+    padding: 3rem;
+    border: 0.1rem, solid,  var(--accent-copper);
+    border-radius: 3.125rem;
+    gap: 2rem;
+    text-align: center;
+}
+
+#C-h2{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-accent-orange);
 }
 
 /*FOOTER*/

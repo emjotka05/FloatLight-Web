@@ -20,7 +20,10 @@ actionButtons.forEach(actionButton => {
     actionButton.addEventListener("click", () => {
         if(actionButton.id === "stripe-btn"){
             requestSession()
-        }else{
+        }else if(actionButton.id === 'go-back-btn'){
+            window.location.href = "index.html"
+        }
+        else{
             window.location.href = "store.html"
         }
     })
