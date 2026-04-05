@@ -220,8 +220,8 @@ nav {
     text-align: center;
     font-weight: 600;
     font-size: 2.8rem;
-    margin-bottom: 0rem;
-    margin-top: 5rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
 }
 
 #SP-h2 span {
@@ -233,7 +233,7 @@ nav {
 #SP-text-subsection {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 4rem;
     text-align: right;
     max-width: 30rem;
     margin-bottom: 4rem;
@@ -262,28 +262,31 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 6rem;
     width: fit-content;
     flex: 1;
+    margin-bottom: 2rem;
 
 }
+
 #img2-wrapper {
-    flex: 1; 
+    flex: 1;
     display: flex;
     justify-content: center;
-    min-width: 15rem; 
+    min-width: 15rem;
 }
 
 #SP-img1 {
-    max-width: 10rem;
+    max-width: 12rem;
+    margin-top: 5rem;
 }
 
 #SP-img2 {
     max-height: 55rem;
     border-radius: 1.5rem;
-    margin-bottom: 4rem;
-    width: 100%; 
-    object-fit: cover; 
+    margin-bottom: 3rem;
+    width: 100%;
+    object-fit: cover;
 }
 
 /*THIRD PAGE*/
@@ -363,11 +366,12 @@ nav {
     gap: 1.5rem;
     align-items: center;
 }
+
 .TP-avatar {
-    width: 4.5rem; 
+    width: 4.5rem;
     height: 4.5rem;
-    object-fit: cover; 
-    border-radius: 50%; 
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .TP-card-offset {
@@ -385,10 +389,13 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
 }
 
 #CP-hero {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 12.5rem;
     padding: 2rem;
     flex: 1;
@@ -594,36 +601,128 @@ nav {
     font-size: 0.95rem;
 }
 
+/*ANIMATIONS*/
+
+.observed {
+    opacity: 0;
+    transition: 0.6s ease;
+}
+
+.observed.show {
+    opacity: 1;
+}
+
+h1.observed,
+h2.observed,
+h3.observed {
+    translate: -10%;
+}
+
+h1.observed.show,
+h2.observed.show,
+h3.observed.show {
+    translate: 0;
+}
+
+img.observed {
+    scale: 0.8;
+}
+
+img.observed.show {
+    scale: 1;
+}
+
+.TP-card.observed {
+    transition: none;
+}
+
+@keyframes cardDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.TP-card.card1.observed.show {
+    animation: cardDown 0.6s ease both;
+}
+
+.TP-card.card2.observed.show {
+    animation: cardDown 0.6s ease 0.4s both;
+}
+
+.TP-card.card3.observed.show {
+    animation: cardDown 0.6s ease 0.6s both;
+}
+
+
+
 /*RWD*/
 
-@media(max-width: 1150px){
-    #CP-hero{
+@media (max-width: 1320px) {
+    #SecondPage {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    #TP-card-container {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    nav {
+        gap: 3rem;
+    }
+
+    .nav-links {
+        gap: 3rem;
+    }
+
+    #SP-text-subsection {
+        gap: 3rem;
+    }
+
+    #SP-img-and-btn {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 1150px) {
+    #CP-hero {
         margin-top: 3rem;
         flex-direction: column;
         padding: 3rem;
         justify-content: center;
         align-items: center;
     }
-
 }
+
 @media (max-width: 1024px) {
     html {
         font-size: 95%;
     }
-    #SP-h2{
-        margin-top: 0rem;
+
+    #SP-h2 {
+        margin-top: 0;
         margin-bottom: 4rem;
     }
-    #TP-card-container{
+
+    #TP-card-container {
         padding: 2rem;
     }
-    
 }
+
 @media (max-width: 768px) {
     html {
         font-size: 85%;
     }
-    
+
     #SP-hero {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -631,7 +730,7 @@ nav {
         align-items: center;
     }
 
-    #SP-img-and-btn, 
+    #SP-img-and-btn,
     #img2-wrapper {
         display: contents;
     }
@@ -640,10 +739,9 @@ nav {
         grid-column: 1;
         grid-row: 1;
         width: 100%;
-        max-width: 2.5rem; 
-        height: 100%; 
+        max-width: 2.5rem;
+        height: 100%;
         max-height: 100%;
-
     }
 
     #SP-text-subsection {
@@ -654,7 +752,7 @@ nav {
     }
 
     #SP-img2 {
-        grid-column: 1 / span 2; 
+        grid-column: 1 / span 2;
         grid-row: 2;
         margin-bottom: 2rem;
         width: 100%;
@@ -665,9 +763,9 @@ nav {
     }
 
     #SP-hero .action-btn {
-        grid-column: 1 / span 2; 
+        grid-column: 1 / span 2;
         grid-row: 3;
-        justify-self: center; 
+        justify-self: center;
     }
 
     #TP-card-container {
@@ -675,44 +773,76 @@ nav {
     }
 
     .TP-card-offset {
-        margin-top: 0rem;
+        margin-top: 0;
+    }
+
+    #footer-container {
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        align-items: center;
     }
 }
-@media(max-width: 680px){
-    html{
+
+@media (max-width: 680px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 474px) {
+    html {
         font-size: 75%;
     }
-    
-}
-@media(max-width: 595px){
-    html{
-        font-size: 60%;
+
+    nav {
+        gap: 1.5rem;
     }
-   
-}
-@media(max-width: 474px){
-    html{
-        font-size: 45%;
+
+    .nav-links {
+        gap: 1.5rem;
     }
-    
+
+    #nav-title {
+        font-size: 1.3rem;
+    }
+
+    .nav-text {
+        font-size: 1.3rem;
+    }
+
+    #FirstPage h1 {
+        font-size: 3.5rem;
+    }
+
+    #FP-h2 {
+        font-size: 2rem;
+    }
+
+    #FP-image {
+        width: 22rem;
+    }
+
+    #SP-h2 {
+        font-size: 2.3rem;
+    }
 
     #TP-h2 {
+        font-size: 2.3rem;
         margin-top: 2rem;
         margin-bottom: 1.5rem;
     }
 
     #TP-card-container {
-        gap: 1rem; 
-        padding: 1rem; 
-        margin-bottom: 1.5rem; 
+        gap: 1rem;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     #ThirdPage .action-btn {
-        margin-bottom: 60rem; 
-    }
-}
-@media(max-width: 360px){
-    html{
-        font-size: 40%;
+        margin-bottom: 5rem;
     }
 }

@@ -15,6 +15,22 @@ actionButtons.forEach(actionButton => {
 
 /*!!!!VERSION WITH BACKEND!!!!*/
 const actionButtons = document.querySelectorAll(".action-btn")
+const observedElements = document.querySelectorAll(".observed")
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            console.log("observed element")
+            entry.target.classList.add("show")
+        }else{
+            entry.target.classList.remove("show")
+        }
+    })
+}, {})
+
+observedElements.forEach((el) => {
+    observer.observe(el)
+})
 
 actionButtons.forEach(actionButton => {
     actionButton.addEventListener("click", () => {
