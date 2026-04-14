@@ -4,37 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FloatLight | Success</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <title>FloatLight | Manage your order</title>
+    <link rel="stylesheet" href="styles.css"
 </head>
 
-<body>
-    <header>
+    <body>
+        <header>
         <nav>
             <a href="index.html" id="nav-title" aria-label="FloatLight Home Page">FloatLight</a>
             <div class="nav-links">
                 <a href="index.html#SecondPage" class="nav-text">Features</a>
                 <a href="#contact" class="nav-text">Contact</a>
                 <a href="index.html#ThirdPage" class="nav-text">Why Us</a>
-            </div>
+            </div>    
         </nav>
     </header>
-
     <main>
-        <section id="SuccessPage" class="screen">
-            <div id="SucP-container">
-                <h1 class="observed">Thank you for your Purchase! ✅</h1>
-                <h2 class="observed" id="SucP-h2">FloatLight order received.<br>Check your email for details.</h2>
-                <button id="go-back-btn" class="action-btn observed">BACK TO MAIN PAGE</button>
+        <section id="MPage" class="screen">
+            <div class="MP-container">
+                <h1>Order Status</h1>
+                <h2 id="MP-h2-order-status">Loading...</h2>
+                <div id="MP-button-wrapper"></div>
             </div>
         </section>
     </main>
-
     <footer id="contact">
         <div id="footer-container">
             <div class="footer-brand">
@@ -62,6 +55,7 @@
     </footer>
 
     <script src="script.js"></script>
-</body>
+
+    </body>
 
 </html>
